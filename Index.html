@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+</head>
+<body>
+<form>
+   <h1><marquee>select your preferred Gender From Below Given Choices...</marquee></h1>
+   <h1></h1>
+       <input type="radio" name="gender" value="male">male <br>
+	   <input type="radio" name="gender" value="Female">Female<br>
+	   <input type="radio" name="gender" value="other">other<br>
+	   <input type="button" onclick="myFunction()" value="Display your Label!"><br><br>  
+	   <input type="text" id="results" size="50">
+	   </form>
+	   <script>
+	   function myfunction(){
+	     let gender=document.forms[0];
+		 let txt="";
+		 let i;
+		 
+		 for(i=0; i < gender.length; i++)
+		 {
+		  if(gender[i].checked)
+		  {
+		  txt = txt + gender[i].value + "";
+		  }
+		 }
+     	document.getElementById("results").value="Your selected gender is:"+ txt;
+		}
+		</script>
+		<body>
+		<html>
